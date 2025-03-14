@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+    rotate:4.29deg ;
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+.moving-box {
+  rotate:4.29deg clockwise;
+  animation: upDown 2s infinite ease-in-out;
+}
+
+
+/* banner */
+
+.outlined-text {
+  color: transparent; /* Make the text color transparent */
+  -webkit-text-stroke: 1px #8750F7; /* Create the outline with desired color */
+  text-stroke: 1px #8750F7; /* For non-webkit browsers */
+}
+
+
+.outer-banner::before {
+  content: "  ";
+  width: 100px;
+  height: 100px;
+  border-radius: bottom right 100%;
+  background: linear-gradient(260.91deg, #8750F7 0%, rgba(115, 67, 210, 0) 100%);
+  filter: blur(50px);
+  position: absolute;
+  top: 0%;
+  right: -0%;
+  z-index: -1;
+}
+
+.outer-banner {
+  box-sizing: border-box;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+/* banner-right */
+
+.banner-right::before {
+
+  content: "  ";
+  width: 200px;
+  height: 200px;
+  border-radius: bottom right 100%;
+  background: linear-gradient(260.91deg, #8750F7 0%, rgba(115, 67, 210, 0) 100%);
+  filter: blur(50px);
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: -1;
+}
+
+
+.banner-right {
+  box-sizing: border-box;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* download button */
+
+.new-button::before {
+  content: '';
+  width: 250px;
+  height: 200px;
+  border-radius: 100%;
+  background: linear-gradient(#8750f7, #2A1454);
+  color: white;
+  position: absolute;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: all 1s ease;
+}
+
+.new-button:hover::before {
+  transform: translateY(0px);
+  color: white;
+}
+
+.new-button:hover {
+  color: white;
+}
+
+.new-button {
+  position: relative;
+  overflow: hidden;
+  width: 211px;
+  height: 56px;
+  text-align: center;
+  background-color: white;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8750f7;
+  border: 1px solid #8750f7;
+  border-radius: 50px;
+}
+
+
+/* socail icons */
+
+.social-icon::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(#8750f7, #2A1454);
+  color: white;
+  position: absolute;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: all 0.6s ease;
+}
+
+.social-icon:hover::before {
+  transform: translateY(0px);
+  color: white;
+}
+
+.social-icon:hover {
+  color: white;
+}
+
+
+.social-icon {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  z-index: 0;
+}
+
+
+/* work section */
+
+.work-section::before {
+
+  content: "  ";
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background: linear-gradient(260.91deg, #8750F7 0%, rgba(115, 67, 210, 0) 100%);
+  filter: blur(20px);
+  position: absolute;
+  top: 41%;
+  left: 35%;
+  z-index: -1;
+}
+
+.work-section {
+  z-index: 10;
+  position: relative;
+}

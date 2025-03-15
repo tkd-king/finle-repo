@@ -43,7 +43,7 @@ function ExperiencEducation() {
   return (
     <div id='experience' className=' px-[120px] pt-8 md:pt-0 py-8 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-[50px] md:gap-[100px]  items-center justify-center bg-gray-100 '  >
       <div className='flex flex-col text-center md:text-start gap-[20px] '>
-        <Headings level='2' text='My Experience' /> 
+        <Headings level='2' text='My Education' /> 
         {experience.map((item, index) => (
           <div key={index} className='p-4 flex flex-col md:text-start text-center justify-center md:justify-start bg-white rounded-xl' data-aos="zoom-in">
             <Headings level='6' text={item.title} />

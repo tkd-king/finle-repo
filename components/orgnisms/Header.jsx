@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CgMenuBoxed } from "react-icons/cg";
 import Anchors from "../atoms/Anchors";
 import { RiCloseLargeFill } from "react-icons/ri";
+import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +23,10 @@ const Header = () => {
       <div className=" w-[100%] flex gap-[30px] items-center ">
         <div className="logo w-[15%] md:w-[5%] ">
           <Link href={"/"}>
-            <img
-              src="/assets/images/11.png"
+            <Image
+              src={"/assets/images/11.png"}
+              width={150}
+              height={150}
               className="hover:cursor-pointer w-[100%] "
               alt="Header image"
               title="Muhammad Usama"

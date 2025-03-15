@@ -38,7 +38,7 @@ function SkillsSection() {
     />
     <SkillCardSection 
       text={"C++(CPlusPlus)"} 
-      image={"assets/images/C++ (CPlusPlus).png"} 
+      image={"/assets/images/C++ (CPlusPlus).png"} 
       perc={"60%"}
     />
     <SkillCardSection 

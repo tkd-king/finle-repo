@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaRegCalendarDays } from "react-icons/fa6";
 
@@ -8,7 +9,7 @@ function BlogsComponent() {
         <div className="flex flex-wrap items-center justify-center -m-4">
           <div className="p-4 w-[400px] md:w-1/3 lg:h-[350px] md:h-36 relative" data-aos="flip-up">
             <div className=" h-[300px] md:h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-              <img src="/assets/images/blog1.png" alt="image" className="bg-cover" />
+              <Image src="/assets/images/blog1.png" width={400} height={400} alt="image" className="bg-cover" />
               <h2 className="tracking-widest text-xs title-font font-[200] mb-1 absolute top-8 left-8 p-2 rounded-2xl bg-gradient-to-tl from-[#2A1454] to-[#8750F7] text-white">
                 SAAS
               </h2>
@@ -25,7 +26,7 @@ function BlogsComponent() {
                       stroke-width="2"
                       fill="none"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                       viewBox="0 0 24 24"
                     >
                       <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
@@ -33,9 +34,9 @@ function BlogsComponent() {
                     no comments
                   </span>
                 </div>
-                <h1 className="title-font w-[80%] text-lg font-[700] text-[#2A1454] mb-1">
+                <h4 className="title-font w-[80%] text-lg font-[700] text-[#2A1454] mb-1">
                   The Role of Technology in Modern...
-                </h1>
+                </h4>
                 <a className=" text-indigo-500 inline-flex items-center ml-auto md:mb-2 lg:mb-0">
                     Learn More
                     <svg
@@ -45,9 +46,9 @@ function BlogsComponent() {
                       stroke-width="2"
                       fill="none"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                     >
-                      <path d="M5 12h14"></path>
+                      <path d="M5 12h44"></path>
                       <path d="M12 5l7 7-7 7"></path>
                     </svg>
                   </a>
@@ -56,7 +57,7 @@ function BlogsComponent() {
           </div>
           <div className="p-4 w-[400px] md:w-1/3 lg:h-[350px] md:h-36 relative" data-aos="flip-up">
             <div className="h-[300px] md:h-full  border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-              <img src="/assets/images/blog2.png" alt="image" className="bg-cover" />
+              <Image width={400} height={400} src="/assets/images/blog2.png" alt="image" className="bg-cover" />
               <h2 className="tracking-widest text-xs title-font font-[200] mb-1 absolute top-8 left-8 p-2 rounded-2xl bg-gradient-to-tl from-[#2A1454] to-[#8750F7] text-white">
                 SAAS
               </h2>
@@ -73,7 +74,7 @@ function BlogsComponent() {
                       stroke-width="2"
                       fill="none"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                       viewBox="0 0 24 24"
                     >
                       <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
@@ -81,9 +82,9 @@ function BlogsComponent() {
                     no comments
                   </span>
                 </div>
-                <h1 className="title-font text-lg font-[700] text-[#2A1454] mb-1">
+                <h4 className="title-font text-lg font-[700] text-[#2A1454] mb-1">
                   A Song And Dance Act
-                </h1>
+                </h4>
                <a className=" text-indigo-500 inline-flex items-center ml-auto md:mb-2 lg:mb-0">
                     Learn More
                     <svg
@@ -93,9 +94,9 @@ function BlogsComponent() {
                       stroke-width="2"
                       fill="none"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                     >
-                      <path d="M5 12h14"></path>
+                      <path d="M5 12h44"></path>
                       <path d="M12 5l7 7-7 7"></path>
                     </svg>
                   </a>
@@ -104,7 +105,7 @@ function BlogsComponent() {
           </div>
           <div className="p-4 w-[400px] md:w-1/3 lg:h-[350px] md:h-36 relative" data-aos="flip-up">
             <div className="h-full h-[318px]  border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-              <img src="/assets/images/blog3.png" className=" bg-cover" alt="" />
+              <Image width={400} height={400} src="/assets/images/blog3.png" className=" bg-cover" alt="" />
               <h2 className="tracking-widest text-xs title-font font-[200] mb-1 absolute top-8 left-8 p-2 rounded-2xl bg-gradient-to-tl from-[#2A1454] to-[#8750F7] text-white">
                 DESIGN
               </h2>
@@ -121,7 +122,7 @@ function BlogsComponent() {
                       stroke-width="2"
                       fill="none"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                       viewBox="0 0 24 24"
                     >
                       <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
@@ -129,9 +130,9 @@ function BlogsComponent() {
                     no comments
                   </span>
                 </div>
-                <h1 className="title-font text-lg font-[700] text-[#2A1454] mb-1">
+                <h4 className="title-font text-lg font-[700] text-[#2A1454] mb-1">
                   Shooting Stars
-                </h1>
+                </h4>
                <a className=" text-indigo-500 inline-flex items-center ml-auto md:mb-2 lg:mb-0">
                     Learn More
                     <svg
@@ -141,9 +142,9 @@ function BlogsComponent() {
                       stroke-width="2"
                       fill="none"
                       stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                     >
-                      <path d="M5 12h14"></path>
+                      <path d="M5 12h44"></path>
                       <path d="M12 5l7 7-7 7"></path>
                     </svg>
                   </a>

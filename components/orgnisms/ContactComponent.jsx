@@ -5,6 +5,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
 import { motion } from "framer-motion";
+import { FaRegThumbsUp } from "react-icons/fa";
 
 function ContactComponent() {
   const [loading, setLoading] = useState(false);
@@ -84,7 +85,7 @@ const onClose = () => {
           ✅
         </motion.div>
         <h2 className="text-xl font-semibold text-gray-800">Success!</h2>
-        <p className="text-gray-600 mt-2">"Your Message Successfully Send 🎉"</p>
+        <p className="text-gray-600 mt-2">"Your Message Successfully Send <FaRegThumbsUp /> "</p>
         <button 
           onClick={onClose} 
           className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"

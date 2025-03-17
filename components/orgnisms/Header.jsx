@@ -73,7 +73,7 @@ const Header = () => {
     </div>
     <Link href={"#contact"}>
         {" "}
-        <Button variant="header-button" text="Hire me!" />{" "}
+        <div onClick={handlClose}>  <Button variant="header-button" text="Hire me!" />{" "} </div>
       </Link>
       </div>
     </div>

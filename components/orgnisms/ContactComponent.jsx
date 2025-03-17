@@ -160,7 +160,7 @@ const onClose = () => {
           {!loading && (<Button type={'submit'} variant="heeder-button" text="Send Message" />)}
           {loading && (<Button variant="loading-button" text="Sending..." />)}
           </div>
-       <div className="flex text-sm fixed bottom-5 right-20 text-[#2A1454]">
+       <div className="flex md:text-sm text-[8px] fixed bottom-5 md:right-20 right-15 text-[#2A1454]">
         <p>If You easy, then contact me via wattsapp.</p>
         <a
       href={`https://wa.me/${phoneNumber}`}
@@ -169,7 +169,7 @@ const onClose = () => {
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition"
     >
-      <FaWhatsapp size={30} />
+      <FaWhatsapp className="md:text-[30px] text-[20px] " />
     </a>
        </div>
         </form>)}

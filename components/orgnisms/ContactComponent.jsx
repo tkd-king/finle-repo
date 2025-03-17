@@ -85,7 +85,7 @@ const onClose = () => {
           ✅
         </motion.div>
         <h2 className="text-xl font-semibold text-gray-800">Success!</h2>
-        <p className="text-gray-600 mt-2">"Your Message Successfully Send <FaRegThumbsUp /> "</p>
+        <p className="text-gray-600 mt-2">Your Message Successfully Send <FaRegThumbsUp /> </p>
         <button 
           onClick={onClose} 
           className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"

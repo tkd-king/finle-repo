@@ -4,8 +4,11 @@ import Headings from "../atoms/Headings";
 import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
+import { motion } from "framer-motion";
 
 function ContactComponent() {
+  const [loading, setLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -18,19 +21,39 @@ function ContactComponent() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const handleSubmit = (e) => {
+const onClose = () => {
+  setIsVisible(false)
+}
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Thanks for Contact me Please wait i will contact you immediately ")
-    console.log(formData);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      option: "",
-      message: "",
-    });
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setFormData({ firstName: "", lastName:"", phone:"", option:"", email:"",  message: "" });
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+        console.log("Err frontend ::",data.error);
+        
+      }
+    } catch (error) {
+      setIsVisible(false)
+    }
+    setLoading(false);
+    setTimeout(() => {
+      setIsVisible(false)
+    }, 4000);
   };
 
   return (
@@ -44,7 +67,34 @@ function ContactComponent() {
                   Just simple like that!"
           />
         </div>
-        <form onSubmit={handleSubmit} className="mt-5 flex flex-col md:items-start items-center justify-center">
+        { isVisible && (
+      <motion.div 
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50"
+    >
+      <div className="bg-white rounded-2xl shadow-xl p-6 w-80 text-center relative">
+        <motion.div 
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 200 }}
+          className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          ✅
+        </motion.div>
+        <h2 className="text-xl font-semibold text-gray-800">Success!</h2>
+        <p className="text-gray-600 mt-2">"Your Message Successfully Send 🎉"</p>
+        <button 
+          onClick={onClose} 
+          className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+        >
+          OK
+        </button>
+      </div>
+    </motion.div>
+    )}
+        { !isVisible && (<form onSubmit={handleSubmit} className="mt-5 flex flex-col md:items-start items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
@@ -102,8 +152,12 @@ function ContactComponent() {
             className="p-3 border rounded-md w-full mt-4"
             rows="4"
           ></textarea>
-          <Button variant="heeder-button" text="Send Message" />
-        </form>
+          <div className="mt-3">
+          {!loading && (<Button type={'submit'} variant="heeder-button" text="Send Message" />)}
+          {loading && (<Button variant="loading-button" text="Sending..." />)}
+          </div>
+          
+        </form>)}
       </div>
       {/* Contact information */}
       <div className="right mt-10 md:mt-0 w-full md:w-[50%] flex flex-col items-center md:items-start justify-center space-y-2 md:space-y-6" data-aos="zoom-in-left">

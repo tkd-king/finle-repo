@@ -6,6 +6,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
 import { motion } from "framer-motion";
 import { FaRegThumbsUp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa"; // Install react-icons if not installed
 
 function ContactComponent() {
   const [loading, setLoading] = useState(false);
@@ -56,6 +57,7 @@ const onClose = () => {
       setIsVisible(false)
     }, 4000);
   };
+  const phoneNumber = process.env.MOBILE_NUMBER_ADMIN; // Apna WhatsApp number likho
 
   return (
     <div id="contact" className="w-full flex md:flex-row flex-col space-x-0 md:space-x-4 bg-[#F6F3FC] py-12 md:py-[150px] px-[50px]">
@@ -85,7 +87,7 @@ const onClose = () => {
           ✅
         </motion.div>
         <h2 className="text-xl font-semibold text-gray-800">Success!</h2>
-        <p className="text-gray-600 mt-2">Your Message Successfully Send <FaRegThumbsUp /> </p>
+        <p className="text-gray-600 mt-2 text-sm flex">Your Message Successfully Send <FaRegThumbsUp className="ml-2" size={15} /> </p>
         <button 
           onClick={onClose} 
           className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
@@ -95,7 +97,8 @@ const onClose = () => {
       </div>
     </motion.div>
     )}
-        { !isVisible && (<form onSubmit={handleSubmit} className="mt-5 flex flex-col md:items-start items-center justify-center">
+        { !isVisible && (
+          <form onSubmit={handleSubmit} className="mt-5 flex flex-col md:items-start items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
@@ -157,7 +160,18 @@ const onClose = () => {
           {!loading && (<Button type={'submit'} variant="heeder-button" text="Send Message" />)}
           {loading && (<Button variant="loading-button" text="Sending..." />)}
           </div>
-          
+       <div className="flex text-sm fixed bottom-5 right-20 text-[#2A1454]">
+        <p>If You easy, then contact me via wattsapp.</p>
+        <a
+      href={`https://wa.me/${phoneNumber}`}
+      title="Click here"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition"
+    >
+      <FaWhatsapp size={30} />
+    </a>
+       </div>
         </form>)}
       </div>
       {/* Contact information */}

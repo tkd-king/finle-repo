@@ -12,7 +12,7 @@ const BannerleftSec = () => {
         <div className="w-full md:w-[49%] flex flex-col gap-[20px] text-center md:text-left">
         <div className="flex flex-col gap-[10px]" >
           <Headings level="3" text="I am Usama" />
-          <Headings level="1" text="Web Developer + UX Designer" />
+          <h1 className='capitalize text-[45px] lg:text-[65px] leading-[58px] md:leading-[78px] max font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8750F7] to-[#2A1454]'>Web Developer + UX Designer</h1>
           <Headings
             level="5"
             text="I break down complex user experience problems to create integrity-focused solutions that connect billions of people"

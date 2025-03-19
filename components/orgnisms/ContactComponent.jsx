@@ -61,7 +61,7 @@ const onClose = () => {
 
   return (
     <div id="contact" className="w-full flex md:flex-row flex-col space-x-0 md:space-x-4 bg-[#F6F3FC] py-12 md:py-[150px] px-[50px]">
-      <div className="left w-full md:w-[50%] px-[30px] py-[50px] bg-white rounded-xl ml-0 md:ml-10" data-aos="zoom-in-right">
+      <div className="left w-full md:w-[50%] px-2 md:px-[30px] py-[50px] bg-white rounded-xl ml-0 md:ml-10" data-aos="zoom-in-right">
         <div className="text-center md:text-start w-full md:w-[90%] flex flex-col">
           <Headings level="2" text="Let’s work together!" />
           <Headings
@@ -99,7 +99,7 @@ const onClose = () => {
     )}
         { !isVisible && (
           <form onSubmit={handleSubmit} className="mt-5 flex flex-col md:items-start items-center justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
             <input
               type="text"
               name="firstName"
@@ -161,7 +161,6 @@ const onClose = () => {
           {loading && (<Button variant="loading-button" text="Sending..." />)}
           </div>
        <div className="flex md:text-sm text-[8px] fixed bottom-5 md:right-20 right-15 text-[#2A1454]">
-        <p>If You easy, then contact me via wattsapp.</p>
         <a
       href={`https://wa.me/${phoneNumber}`}
       title="Click here"

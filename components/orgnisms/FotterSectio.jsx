@@ -8,7 +8,7 @@ import Image from "next/image";
 
 function FotterSectio() {
   return (
-    <div className="bg-[#2A1454] pt-8 pb-3 md:py-10 text-center">
+    <div className="bg-[#2A1454] pt-8 pb-2 md:py-10 text-center">
       <div className=" w-[100%] flex flex-col gap-[30px] items-center ">
         <div className="logo w-[15%] md:w-[5%] ">
           <Link href={"#header"}>

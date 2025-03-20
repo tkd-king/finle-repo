@@ -162,7 +162,7 @@ const onClose = () => {
           </div>
        <div className="flex md:text-sm text-[8px] fixed bottom-5 md:right-20 right-15 text-[#2A1454]">
         <a
-      href={`https://wa.me/${phoneNumber}`}
+      href={`https://wa.me/+923164288921`}
       title="Click here"
       target="_blank"
       rel="noopener noreferrer"
